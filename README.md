@@ -1,11 +1,9 @@
-# project_vite_tailwindcss
+# Project with vite and tailwindcss
 
 
 ```bash
-
 npm i -D autoprefixer cssnano postcss postcss-cli tailwindcss gsap vite
 npx tailwindcss init -p
-
 ```
 
 
@@ -30,13 +28,11 @@ module.exports = {
 ## packages.json
 
 
-```bash
-
+```js
   "scripts": {
     "build": "vite build --emptyOutDir --base=./",
     "watch": "vite --host --base=./"
-  },
-
+  }
 ```
 
 
@@ -47,8 +43,7 @@ module.exports = {
 module.exports = {
   plugins: {
     tailwindcss: {},
-    autoprefixer: {},
-    // cssnano: {}, // minify
+    autoprefixer: {}
   },
 };
 ```
@@ -60,7 +55,7 @@ mkdir src
 vim vite.config.js
 ```
 
-```bash
+```js
 module.exports = {
   root: "src",
   build: {
@@ -70,17 +65,15 @@ module.exports = {
 ```
 
 
-## files in src
+## Files in src
 
 
 ```bash
-
 touch src/{index.html,input.css,app.js}
 ```
 
-
-* fill index.html with references to app.js as module
-* in `app.js` add `include "./input.css"`
+* Fill index.html with references to app.js as module
+* In `app.js` add `include "./input.css"`
 
 
 ## input.css
@@ -93,13 +86,13 @@ touch src/{index.html,input.css,app.js}
 
 ## app.js
 
-```bash
+```js
 import "./input.css";
 ```
 
 ## index.html
 
 
-```bash
+```html
 <script type="module" src="./input.js"></script>
 ```
